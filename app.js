@@ -58,9 +58,9 @@
 // tab = [1,4,2,5,1,5,3,20,15,50,1,5,-2,-20];
 
 
-var func = function(a,b){
-    return a>b ;
- };
+// var func = function(a,b){
+//     return a>b ;
+//  };
 
 function tri(tab,func){
 
@@ -68,7 +68,7 @@ function tri(tab,func){
 
         for (var j = i+1; j < tab.length; j++){
 
-            if(func(tab[j],tab[i])){
+            if(tab[j] > tab[i]){
 
                 var tabTri = tab[j];
                 tab[j]=tab[i];
