@@ -111,18 +111,18 @@ var tab = [506, 69, 990, 818, 576, 204, 670, 19, 222, 838, 427, 932, 444, 522, 2
 
 // ___________________________________ ce que je veux rechercher est ici ______________________
 
-var nbRecherche = 838;
+// var nbRecherche = 838; ce chiffre sera entré par un utilisateur qui viendra ce mettre dans le paramêtre de la fonction recherche(tab,nbRecherche)
 
 
 // ____________________________ fonction ici _______________________________
 
-function recherche(){
+function recherche(tab,nbRecherche){
 
     for (var i = 0; i < tab.length; i++){  // boucle pour parcourir le tableau
 
         if(tab[i] === nbRecherche){     // comparaison entre l'itération de la boucle pour tomber sur la recherche
 
-            var idValue = tab.indexOf(nbRecherche)+1; // récupère l'id du tableau et +1 pour une facilité de lecture de l'utilisateur un tableau commence a 0 pas a 1 !
+            var idValue = i+1; // récupère l'id du tableau et +1 pour une facilité de lecture de l'utilisateur un tableau commence a 0 pas a 1 !
 
             console.log(idValue);
 
@@ -136,4 +136,4 @@ function recherche(){
     
 }
 
-console.log(recherche());
+console.log(recherche(tab,838));
