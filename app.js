@@ -118,17 +118,17 @@ var nbRecherche = 838;
 
 function recherche(){
 
-    for (var i = 0; i < tab.length; i++){
+    for (var i = 0; i < tab.length; i++){  // boucle pour parcourir le tableau
 
-        if(tab[i] === nbRecherche){
+        if(tab[i] === nbRecherche){     // comparaison entre l'itération de la boucle pour tomber sur la recherche
 
-            var idValue = tab.indexOf(nbRecherche);
+            var idValue = tab.indexOf(nbRecherche)+1; // récupère l'id du tableau et +1 pour une facilité de lecture de l'utilisateur un tableau commence a 0 pas a 1 !
 
             console.log(idValue);
 
-            return "le resultat est " + idValue;
+            return "le resultat est l'entrée numéro : " + idValue;  // affichage utilisateur de l'index de l'entrée de la recherche !
 
-            break;
+            break; // casser la boucle pour ne pas avoir à parcourir le reste du tableau une fois que la réponse soit trouvé
 
         }
 
