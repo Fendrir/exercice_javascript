@@ -193,7 +193,7 @@ function rechercheDicotomique(tab,rechercheUt){
 
     var valMediane;
     
-    while (!trouver && min !== max) {
+    while (!trouver && (max-min>=2)) {
 
         valMediane = parseInt((max-min)/2)+min; // Création de l'indice de la mediane du tableau
 
@@ -203,11 +203,11 @@ function rechercheDicotomique(tab,rechercheUt){
 
         }else if (tab[valMediane]>rechercheUt){
 
-            max = valMediane-1;                     // Positionnement sur l'intervalle inférieur
+            max = valMediane;                     // Positionnement sur l'intervalle inférieur
             
         }else{
             
-            min = valMediane+1;                     // Positionnement sur l'intervalle supérieur
+            min = valMediane;                     // Positionnement sur l'intervalle supérieur
 
         }
         
@@ -218,4 +218,4 @@ function rechercheDicotomique(tab,rechercheUt){
 
 }
 
-console.log(rechercheDicotomique(tri(tab),15246));
+console.log(rechercheDicotomique(tri(tab),845));
